@@ -1,16 +1,17 @@
 import React from 'react'
+import classes from './Affairs.module.css'
 
 type AffairPropsType = {
     // key не нужно типизировать
-    affair: any // need to fix any
-    deleteAffairCallback: any // need to fix any
+    affair: string // need to fix any
+    deleteAffairCallback: (_id: number)=>void // need to fix any
 }
 
 function Affair(props: AffairPropsType) {
     const deleteCallback = () => {}// need to fix
 
     return (
-        <div>
+        <div className={classes.affairs}>
             // show some text
 
             <button onClick={deleteCallback}>X</button>
