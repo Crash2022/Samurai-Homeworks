@@ -2,9 +2,9 @@ import React from 'react'
 import classes from './AlternativeMessage.module.css'
 
 type MessagePropsType = {
-    avatar: string,
-    message: string,
-    name: string,
+    avatar: string
+    message: string
+    name: string
     time: string
 }
 
