@@ -3,8 +3,8 @@ import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 
 type AffairsPropsType = { // need to fix any
-    data: string
-    setFilter: (FilterType: string)=>void
+    data: Array<AffairType>
+    setFilter: (filterValue: FilterType)=>void
     deleteAffairCallback: (_id: number)=>void
 }
 
