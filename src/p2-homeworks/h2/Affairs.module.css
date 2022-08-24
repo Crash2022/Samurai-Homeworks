@@ -1,8 +1,29 @@
 .affairs {
 
 }
+.affairs_items {
+
+}
+.affairs_items_name {
+
+}
+.affairs_items_priority {
+
+}
+.affairs_items_buttonStyle {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.filterButtons {
+
+}
 
 button {
     padding: 5px;
     margin: 5px;
+}
+table {
+    margin-left: 10px;
 }
