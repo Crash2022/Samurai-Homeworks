@@ -6,15 +6,15 @@ type AffairPropsType = {
     // key не нужно типизировать
     affair: AffairType // need to fix any
     deleteAffairCallback: (_id: number)=>void // need to fix any
+    id: number
 }
 
 function Affair(props: AffairPropsType) {
-    const deleteCallback = () => {}// need to fix
+    const deleteCallback = () => {props.deleteAffairCallback(props.id)}// need to fix
 
     return (
         <div className={classes.affairs}>
-            // show some text
-
+            {props.affair.name} {props.affair.priority}
             <button onClick={deleteCallback}>X</button>
         </div>
     )
