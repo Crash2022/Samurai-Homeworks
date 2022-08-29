@@ -38,7 +38,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             error && setError('')
         } else {
             name && setName('')
-            setError('Введите имя!')
+            setError('Поле обязательно для заполнения!')
         }
     }
 
@@ -48,7 +48,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             alert(`Hello, ${name}!`)
             setName('')
         } else {
-            setError('Введите имя!')
+            setError('Поле обязательно для заполнения!')
         }
     }
 

@@ -5,15 +5,16 @@
 .spanError {
     color: red;
 }
-.error {
-    margin-right: 5px;
-    border: 2px solid red;
-}
 
 .inputClass {
     margin-right: 5px;
     border: 1px solid black;
 }
+.inputError {
+    margin-right: 5px;
+    border: 2px solid red;
+}
+
 .buttonClass {
     margin-right: 5px;
 }

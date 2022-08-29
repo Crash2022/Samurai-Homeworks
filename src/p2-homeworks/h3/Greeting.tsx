@@ -14,14 +14,15 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
 
-    const inputClass = `${error ? s.error : s.inputClass}` // need to fix with (?:)
+    const inputClass = `${error ? s.inputError : s.inputClass}` // need to fix with (?:)
 
     return (
         <div className={s.someClass}>
-            <p className={s.spanError}>{error}</p>
+            <p>Введитте имя:</p>
             <input value={name} onChange={setNameCallback} className={inputClass}/>
             <button onClick={addUser} className={s.buttonClass}>add</button>
             <span>{totalUsers}</span>
+            <p className={s.spanError}>{error}</p>
         </div>
     )
 }
