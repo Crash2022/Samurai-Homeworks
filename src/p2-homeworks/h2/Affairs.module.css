@@ -27,3 +27,13 @@ button {
 table {
     margin-left: 10px;
 }
+
+.high {
+    color: orange;
+}
+.middle {
+    color: red;
+}
+.low {
+    color: green;
+}
