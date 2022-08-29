@@ -31,10 +31,10 @@ function Affairs(props: AffairsPropsType) {
                     {mappedAffairs}
                 </table>
                 <div className={classes.filterButtons}>
-                    <button onClick={setAll}>All</button>
-                    <button onClick={setHigh}>High</button>
-                    <button onClick={setMiddle}>Middle</button>
-                    <button onClick={setLow}>Low</button>
+                    <button onClick={setAll} className={classes.button}>All</button>
+                    <button onClick={setHigh} className={classes.button}>High</button>
+                    <button onClick={setMiddle} className={classes.button}>Middle</button>
+                    <button onClick={setLow} className={classes.button}>Low</button>
                 </div>
             </div>
         </>
