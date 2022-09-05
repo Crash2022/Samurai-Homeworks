@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import { v1 } from 'uuid';
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
@@ -22,20 +22,21 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         error && setError('');
     }
 
+    let trimName = name.trim();
+
     const addUser = () => {
-        addUserCallback(name)
-        let trimName;
-        if (name) {
-            trimName = name.trim()
+          if (trimName) {
+            addUserCallback(name)
             alert(`Hello, ${trimName}!`);
             setName('');
         } else {
+            setName('');
             setError('Поле обязательно для заполнения!');
         }
     }
 
-    const pressEnterKey = () => {
-        addUser()
+    const pressEnterKey = (event: KeyboardEvent<HTMLInputElement>) => {
+        return event.key === "Enter" && name? addUser() : ''
     }
 
     const totalUsers = users.length // need to fix

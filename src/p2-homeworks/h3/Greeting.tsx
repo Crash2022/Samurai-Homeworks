@@ -7,7 +7,7 @@ type GreetingPropsType = {
     addUser: () => void // need to fix any
     error: string // need to fix any
     totalUsers: number // need to fix any
-    pressEnterKey: () => void
+    pressEnterKey: (event: KeyboardEvent<HTMLInputElement>) => void
 }
 
 // презентационная компонента (для верстальщика)
@@ -17,14 +17,10 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     const inputClass = `${error ? s.inputError : s.inputClass}` // need to fix with (?:)
 
-    const onKeyDownHandler = (event: KeyboardEvent<HTMLInputElement>) => {
-        return event.key === "Enter" ? pressEnterKey() : ''
-    }
-
     return (
         <div className={s.someClass}>
             <p>Введитте имя:</p>
-            <input value={name} onChange={setNameCallback} className={inputClass} onKeyDown={onKeyDownHandler}/>
+            <input value={name} onChange={setNameCallback} className={inputClass} onKeyDown={pressEnterKey}/>
             <button onClick={addUser} className={s.buttonClass}>add</button>
             <span>{totalUsers}</span>
             <p className={s.spanError}>{error}</p>
