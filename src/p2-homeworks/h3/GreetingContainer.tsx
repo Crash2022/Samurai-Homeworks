@@ -34,6 +34,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         }
     }
 
+    const pressEnterKey = () => {
+        addUser()
+    }
+
     const totalUsers = users.length // need to fix
 
     return (
@@ -43,6 +47,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            pressEnterKey={pressEnterKey}
         />
     )
 }
