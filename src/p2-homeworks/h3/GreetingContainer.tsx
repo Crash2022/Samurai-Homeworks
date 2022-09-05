@@ -17,35 +17,17 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [name, setName] = useState<string>('') // need to fix any
     const [error, setError] = useState<string>('') // need to fix any
 
-   /* const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value) // need to fix
-    }
-    const addUser = () => {
-        if (name.length > 0) {
-            alert(`Hello, ${name}!`) // need to fix
-            users.push( {_id: v1(), name: name } );
-            setName('');
-            setError('Введите имя:');
-        } else {
-            setError('Вы не ввели имя!');
-        }
-    }*/
-
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        let trimName = e.currentTarget.value.trim()
-        if(trimName) {
-            setName(trimName);
-            error && setError('');
-        } else {
-            name && setName('')
-            setError('Поле обязательно для заполнения!');
-        }
+        setName(e.currentTarget.value);
+        error && setError('');
     }
 
     const addUser = () => {
         addUserCallback(name)
+        let trimName;
         if (name) {
-            alert(`Hello, ${name}!`);
+            trimName = name.trim()
+            alert(`Hello, ${trimName}!`);
             setName('');
         } else {
             setError('Поле обязательно для заполнения!');
