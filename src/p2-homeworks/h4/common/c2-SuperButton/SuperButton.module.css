@@ -2,6 +2,13 @@
     margin: 10px;
     padding: 15px;
     min-width: 150px;
+    cursor: pointer;
+}
+.default:hover {
+    box-shadow:0px -5px 0 #088 inset;
+}
+.default:disabled:hover {
+    opacity: 0;
 }
 
 .red {
@@ -10,4 +17,8 @@
     color: white;
     padding: 15px;
     min-width: 150px;
+    cursor: pointer;
+}
+.red:hover {
+    opacity: 0.5;
 }
