@@ -6,13 +6,14 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Поле обязательно для заполнения'
 
     const showAlert = () => {
         if (error) {
-            alert('введите текст...')
+            alert('Не трогай код!')
         } else {
             alert(text) // если нет ошибки показать текст
+            setText('')
         }
     }
 
@@ -30,11 +31,11 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue} // проверьте, работает ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}

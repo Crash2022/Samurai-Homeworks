@@ -21,7 +21,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         <div className={s.someClass}>
             <p>Введитте имя:</p>
             <input value={name} onChange={setNameCallback} className={inputClass} onKeyDown={pressEnterKey}/>
-            <button onClick={addUser} className={s.buttonClass}>add</button>
+            <button onClick={addUser} className={s.buttonClass}>Добавить</button>
             <span>{totalUsers}</span>
             <p className={s.spanError}>{error}</p>
         </div>
