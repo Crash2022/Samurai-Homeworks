@@ -2,7 +2,7 @@ import React from 'react'
 
 function Senior() {
     return (
-        <div>
+        <div style={{margin: '20px'}}>
             Senior. Ты уже бородартый дядька, можешь и отдохнуть).
         </div>
     )

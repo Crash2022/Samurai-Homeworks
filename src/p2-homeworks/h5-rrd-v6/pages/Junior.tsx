@@ -2,8 +2,8 @@ import React from 'react'
 
 function Junior() {
     return (
-        <div>
-            Junior. Надо ещё подучиться...
+        <div style={{margin: '20px'}}>
+            Junior. Игнат, я сделал как мог, но я ещё постараюсь... )
         </div>
     )
 }

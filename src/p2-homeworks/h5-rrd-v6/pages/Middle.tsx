@@ -2,7 +2,7 @@ import React from 'react'
 
 function Middle() {
     return (
-        <div>
+        <div style={{margin: '20px'}}>
             Middle. Ты уже знаешь многое, но не всё, так что учись дальше...
         </div>
     )
