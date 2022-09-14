@@ -4,6 +4,7 @@ import style from './Header.module.css'
 
 function Header() {
     return (
+        <>
         <div className={style.header}>
             <div className={style.headerMenu}>
                 Меню
@@ -16,6 +17,14 @@ function Header() {
                 <NavLink to={'/senior'}>Senior</NavLink>
             </div>
         </div>
+        <div className={style.sliderMenu}>
+            <NavLink to={'/pre-junior'}>PreJunior</NavLink>
+            <NavLink to={'/junior'}>Junior</NavLink>
+            <NavLink to={'/middle'}>Middle</NavLink>
+            <NavLink to={'/senior'}>Senior</NavLink>
+            <span>Меню</span>
+        </div>
+        </>
     )
 }
 
