@@ -1,33 +1,17 @@
-.superInput {
-
+.superInputDone {
+    border: 2px solid gray;
+}
+.superInputDone:focus-visible {
+    border: 2px solid black;
+    outline: none;
 }
 
 .errorInput {
     border: 3px solid red;
-    /*background: red;*/
+    outline: none;
 }
-/*.errorInput:focus {
-    border: none;
-}*/
-
-.errorInput:focus {
-    /*border: 5px solid gold;*/
-}
-
 .error {
     color: red;
     height: 20px;
 }
 
-.testSpanError {
-    /*height: 20px;*/
-}
-
-.emptyDiv {
-    position: relative;
-    padding: 30px 0;
-    width: 100%;
-    text-align: center;
-    bottom: 15px;
-    left: -150px;
-}

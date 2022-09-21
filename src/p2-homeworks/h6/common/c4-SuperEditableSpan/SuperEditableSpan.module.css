@@ -1,0 +1,25 @@
+.defaultSpanStyle {
+    display: inline-block;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 15px;
+}
+
+.inputStyle {
+     height: 20px;
+     margin: 5px;
+     background-color: yellow;
+ }
+
+.inputStyle:focus-visible {
+    border: 2px solid blue;
+
+}
+
+.blockStyle {
+    height: 100px;
+}
+
+.blockStyle input {
+
+}
