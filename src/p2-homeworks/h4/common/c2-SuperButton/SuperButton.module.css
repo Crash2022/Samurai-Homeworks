@@ -4,6 +4,7 @@
     min-width: 150px;
     cursor: pointer;
 }
+
 .default:hover {
     box-shadow:0px -5px 0 #088 inset;
 }
@@ -21,4 +22,8 @@
 }
 .red:hover {
     opacity: 0.5;
+}
+
+.superButton {
+    padding: 5px;
 }

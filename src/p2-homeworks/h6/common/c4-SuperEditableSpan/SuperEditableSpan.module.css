@@ -23,3 +23,10 @@
 .blockStyle input {
 
 }
+
+.saveButton {
+    background-color: orange;
+}
+.restoreButton {
+    background-color: green;
+}
