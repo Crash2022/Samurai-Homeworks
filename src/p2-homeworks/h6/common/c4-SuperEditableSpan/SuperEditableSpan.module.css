@@ -6,10 +6,12 @@
 }
 
 .inputStyle {
-     height: 20px;
-     margin: 5px;
-     background-color: yellow;
- }
+    display: inline-block;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 15px;
+    height: 20px;
+}
 
 .inputStyle:focus-visible {
     border: 2px solid blue;
@@ -27,8 +29,12 @@
 .saveButton {
     background-color: orange;
     border: 1px solid black;
+    /*color: white;*/
+    font-size: 16px;
 }
 .restoreButton {
     background-color: green;
     border: 1px solid black;
+    color: white;
+    font-size: 16px;
 }
