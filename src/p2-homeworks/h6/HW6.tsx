@@ -22,13 +22,19 @@ function HW6() {
 
             {/*should work (должно работать)*/}
             <div className={styles.blockStyle}>
-                <SuperEditableSpan
-                    value={value}
-                    onChangeText={setValue}
-                    spanProps={{children: value ? undefined : 'enter text...'}}
-                    className={styles.altInputStyle}
-                    spanClassName={styles.altSpanStyle}
-                />
+                <div className={styles.spanImg}>
+                    <img src="https://econet.ru/media/413/kindeditor/image/201303/20130304203614.jpg"></img>
+                </div>
+                <div>
+                    <SuperEditableSpan
+                        value={value}
+                        onChangeText={setValue}
+                        spanProps={{children: value ? undefined : 'enter text...'}}
+                        className={styles.altInputStyle}
+                        spanClassName={styles.altSpanStyle}
+                    />
+                </div>
+
             </div>
             <SuperButton onClick={save} className={styles.saveButton}>save</SuperButton>
             <SuperButton onClick={restore} className={styles.restoreButton}>restore</SuperButton>
