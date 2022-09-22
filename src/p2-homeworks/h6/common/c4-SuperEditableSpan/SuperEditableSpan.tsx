@@ -24,7 +24,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onBlur,
         onEnter,
         spanProps,
-
+        spanClassName,
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -47,7 +47,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onDoubleClick && onDoubleClick(e);
     }
 
-    const spanClassName = `${styles.defaultSpanStyle} ${className}`
+    const spanClassNameMyself = `${styles.defaultSpanStyle} ${spanClassName}`
 
     return (
         <>
@@ -64,7 +64,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                 ) : (
                     <span
                         onDoubleClick={onDoubleClickCallBack}
-                        className={spanClassName}
+                        className={spanClassNameMyself}
 
                         {...restSpanProps}
                     >

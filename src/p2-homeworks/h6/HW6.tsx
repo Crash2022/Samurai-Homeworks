@@ -26,6 +26,8 @@ function HW6() {
                     value={value}
                     onChangeText={setValue}
                     spanProps={{children: value ? undefined : 'enter text...'}}
+                    className={styles.altInputStyle}
+                    spanClassName={styles.altSpanStyle}
                 />
             </div>
             <SuperButton onClick={save} className={styles.saveButton}>save</SuperButton>

@@ -4,6 +4,9 @@
     padding: 10px;
     margin: 15px;
 }
+.altSpanStyle {
+    border: 2px solid green;
+}
 
 .inputStyle {
     display: inline-block;
@@ -12,18 +15,18 @@
     margin: 15px;
     height: 20px;
 }
-
-.inputStyle:focus-visible {
-    border: 2px solid blue;
-
+.altInputStyle {
+    background-color: green;
+    color: white;
+    display: inline-block;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 15px;
+    height: 20px;
 }
 
 .blockStyle {
     height: 100px;
-}
-
-.blockStyle input {
-
 }
 
 .saveButton {
@@ -38,3 +41,4 @@
     color: white;
     font-size: 16px;
 }
+
