@@ -19,7 +19,7 @@ const initialPeople = [
 
 function HW8() {
     const [people, setPeople] = useState<Array<UserType>>(initialPeople) // need to fix any
-
+    //const [state, dispatch] = useReducer(homeWorkReducer, initialPeople)
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id}>
@@ -29,6 +29,7 @@ function HW8() {
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT_UP', payload: 'up'}));
     const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT_DOWN', payload: 'down'}));
+    const filterAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK_AGE_LESS_18', payload: 'age'}));
 
     return (
         <div>
@@ -38,9 +39,11 @@ function HW8() {
             {/*should work (должно работать)*/}
             {finalPeople}
 
+            {/*<div><SuperButton onClick={()=>dispatch({type: 'SORT_UP', payload: 'up'})}>sort up</SuperButton></div>*/}
+
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
             <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-            check 18
+            <div><SuperButton onClick={filterAge}>filter age</SuperButton></div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}

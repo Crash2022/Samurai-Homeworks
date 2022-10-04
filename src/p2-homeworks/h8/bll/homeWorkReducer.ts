@@ -16,7 +16,7 @@ export const homeWorkReducer = (state: Array<UserType>, action: ActionsType): Ar
                 }
             )];
         }
-        case 'check': {
+        case CHECK_AGE_LESS_18: {
             // need to fix
             return state
         }
@@ -24,7 +24,7 @@ export const homeWorkReducer = (state: Array<UserType>, action: ActionsType): Ar
     }
 }
 
-export type ActionsType = UpSortACType | DownSortACType
+export type ActionsType = UpSortACType | DownSortACType | DownSortACType
 
 const SORT_UP = 'SORT_UP';
 export type UpSortACType = ReturnType<typeof UpSortAC>
@@ -42,6 +42,16 @@ export type DownSortACType = ReturnType<typeof DownSortAC>
 export const DownSortAC = (payload: string) => {
     return {
         type: SORT_DOWN,
+        payload: payload
+    }
+}
+
+const CHECK_AGE_LESS_18 = 'CHECK_AGE_LESS_18';
+export type AgeSortACType = ReturnType<typeof AgeSortAC>
+
+export const AgeSortAC = (payload: string) => {
+    return {
+        type: CHECK_AGE_LESS_18,
         payload: payload
     }
 }
