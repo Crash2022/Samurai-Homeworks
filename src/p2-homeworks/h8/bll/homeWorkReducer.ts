@@ -17,14 +17,14 @@ export const homeWorkReducer = (state: Array<UserType>, action: ActionsType): Ar
             )];
         }
         case CHECK_AGE_LESS_18: {
-            // need to fix
-            return state
+            console.log('CHECK_AGE_LESS_18');
+            return [...state.filter(el => el.age > action.payload)];
         }
         default: return state
     }
 }
 
-export type ActionsType = UpSortACType | DownSortACType | DownSortACType
+export type ActionsType = UpSortACType | DownSortACType | AgeSortACType
 
 const SORT_UP = 'SORT_UP';
 export type UpSortACType = ReturnType<typeof UpSortAC>
@@ -49,7 +49,7 @@ export const DownSortAC = (payload: string) => {
 const CHECK_AGE_LESS_18 = 'CHECK_AGE_LESS_18';
 export type AgeSortACType = ReturnType<typeof AgeSortAC>
 
-export const AgeSortAC = (payload: string) => {
+export const AgeSortAC = (payload: number) => {
     return {
         type: CHECK_AGE_LESS_18,
         payload: payload

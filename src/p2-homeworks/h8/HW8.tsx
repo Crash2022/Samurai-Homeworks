@@ -29,7 +29,7 @@ function HW8() {
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT_UP', payload: 'up'}));
     const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT_DOWN', payload: 'down'}));
-    const filterAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK_AGE_LESS_18', payload: 'age'}));
+    const filterAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK_AGE_LESS_18', payload: 18}));
 
     return (
         <div>
