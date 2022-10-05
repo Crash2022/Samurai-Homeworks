@@ -1,5 +1,5 @@
 import React from 'react'
-import {homeWorkReducer} from '../homeWorkReducer'
+import {AgeFilterAC, homeWorkReducer} from '../homeWorkReducer'
 import {UserType} from "../../HW8";
 
 let initialState: Array<UserType> // need to fix any
@@ -25,6 +25,8 @@ test('sort name down', () => {
     expect(newState[0].name).toBe('Кот');
 })
 test('check age 18', () => {
-    const newState = homeWorkReducer(initialState, {type: 'CHECK_AGE_LESS_18', payload: 18});
+    let minAge = 18;
+    const newState = homeWorkReducer(initialState, AgeFilterAC(minAge));
     expect(newState.length).toBe(4);
+    expect(newState[0].age).toBe(66);
 })

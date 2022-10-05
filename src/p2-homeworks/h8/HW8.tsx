@@ -20,6 +20,7 @@ const initialPeople = [
 function HW8() {
     const [people, setPeople] = useState<Array<UserType>>(initialPeople) // need to fix any
     //const [state, dispatch] = useReducer(homeWorkReducer, initialPeople)
+
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id}>
@@ -29,7 +30,7 @@ function HW8() {
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT_UP', payload: 'up'}));
     const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT_DOWN', payload: 'down'}));
-    const filterAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK_AGE_LESS_18', payload: 18}));
+    const filterAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK_AGE_LESS_18', minAge: 18}));
 
     return (
         <div>
