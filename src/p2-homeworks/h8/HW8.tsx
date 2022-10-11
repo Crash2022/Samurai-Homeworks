@@ -35,17 +35,18 @@ function HW8() {
     return (
         <div>
             <hr/>
-            homeworks 8
+            <div style={{marginLeft: '10px'}}>
+                homeworks 8
 
-            {/*should work (должно работать)*/}
-            {finalPeople}
+                {/*should work (должно работать)*/}
+                {finalPeople}
 
-            {/*<div><SuperButton onClick={()=>dispatch({type: 'SORT_UP', payload: 'up'})}>sort up</SuperButton></div>*/}
+                {/*<div><SuperButton onClick={()=>dispatch({type: 'SORT_UP', payload: 'up'})}>sort up</SuperButton></div>*/}
 
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-            <div><SuperButton onClick={filterAge}>filter age</SuperButton></div>
-
+                <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+                <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+                <div><SuperButton onClick={filterAge}>filter age</SuperButton></div>
+            </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
