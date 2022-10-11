@@ -3,13 +3,14 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
-    const [show, setShow] = useState<boolean>(false)
+    const [date, setDate] = useState<Date>(new Date())
+    const [show, setShow] = useState<boolean>(true)
 
     const stop = () => {
         // stop
     }
     const start = () => {
+        console.log('start')
         stop()
         const id: number = window.setInterval(() => {
             // setDate
@@ -24,7 +25,7 @@ function Clock() {
         // close
     }
 
-    const stringTime = 'Time' // fix with date
+    const stringTime = date.getTime() // fix with date
     const stringDate = 'Date' // fix with date
 
     return (
