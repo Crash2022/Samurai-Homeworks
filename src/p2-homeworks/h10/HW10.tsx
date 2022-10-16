@@ -8,7 +8,7 @@ function HW10() {
     // useSelector, useDispatch
     //const loading = false;
 
-    const [timerId, setTimerId] = useState<number>(0);
+    //const [timerId, setTimerId] = useState<number>(0);
 
     const dispatch = useDispatch();
     const loading = useSelector<AppStoreType, InitialStateType>( state => state.loading);
@@ -19,9 +19,9 @@ function HW10() {
         dispatch(loadingAC(true));
         // setTimeout
         const loadingTimer: number = +setInterval(() => {
-            //dispatch(loadingAC(false));
+
         }, 3000);
-        setTimerId(loadingTimer);
+        //clearInterval(loadingTimer);
     };
 
     return (
@@ -38,7 +38,7 @@ function HW10() {
                         />
                     </div>
                 ) : (
-                    <div>
+                    <div style={{height: '155px'}}>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
                     </div>
                 )
