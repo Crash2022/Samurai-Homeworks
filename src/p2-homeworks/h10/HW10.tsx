@@ -18,7 +18,7 @@ function HW10() {
         // setTimeout
         const loadingTimer: number = +setInterval(() => {
             dispatch(loadingAC(false));
-        }, 1000);
+        }, 2000);
     };
 
     return (
