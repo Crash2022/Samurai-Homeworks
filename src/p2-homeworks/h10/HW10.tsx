@@ -16,9 +16,10 @@ function HW10() {
         console.log('loading...');
         dispatch(loadingAC(true));
         // setTimeout
-        const loadingTimer: number = +setInterval(() => {
+        setTimeout(() => {
             dispatch(loadingAC(false));
-        }, 2000);
+            console.log('stop');
+        }, 1000);
     };
 
     return (
