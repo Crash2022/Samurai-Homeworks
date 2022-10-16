@@ -18,7 +18,8 @@ function AlternativeClock() {
                 {moment().format('DD.MM.YYYY')}
             </div>
             <div>
-                {currentTime}
+                <span>Здесь закомментировано текущее время, но из-за ДЗ 10 я скрыл его</span>
+                {/*{currentTime}*/}
             </div>
         </div>
     )
