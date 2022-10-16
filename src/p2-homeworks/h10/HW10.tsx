@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "./bll/store";
@@ -7,6 +7,8 @@ import {InitialStateType, loadingAC} from "./bll/loadingReducer";
 function HW10() {
     // useSelector, useDispatch
     //const loading = false;
+
+    const [timerId, setTimerId] = useState<number>(0);
 
     const dispatch = useDispatch();
     const loading = useSelector<AppStoreType, InitialStateType>( state => state.loading);
@@ -17,8 +19,9 @@ function HW10() {
         dispatch(loadingAC(true));
         // setTimeout
         const loadingTimer: number = +setInterval(() => {
-
+            //dispatch(loadingAC(false));
         }, 3000);
+        setTimerId(loadingTimer);
     };
 
     return (
