@@ -7,16 +7,16 @@ function AlternativeClock() {
 
     const [date, setDate] = useState<MomentInput>(moment());
 
-    useEffect(()=> {
-        setInterval(()=> {
+    useEffect(() => {
+        const altClock: number = window.setInterval(() => {
             setDate(moment());
-            console.log('interval in moment library')
+            console.log('interval in moment library');
         }, 1000)
 
         return () => {
-            //clearInterval
+            clearInterval(altClock);
         }
-    },[])
+    }, [])
 
     const currentTime = moment().format('hh:mm:ss');
 

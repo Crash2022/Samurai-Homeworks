@@ -4,8 +4,6 @@ import AlternativeClock from "./AlternativeClock";
 
 function HW9() {
 
-    const show = true;
-
     return (
         <div>
             <hr/>
@@ -16,9 +14,9 @@ function HW9() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {
-                show ? <AlternativeClock/> : ''
-            }
+
+            {/*<AlternativeClock/>*/}
+
             <hr/>
         </div>
     )

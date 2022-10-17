@@ -18,7 +18,7 @@ function HW10() {
         console.log('loading...');
         dispatch(loadingAC(true));
         // setTimeout
-        const timer: number = window.setTimeout(() => {
+        window.setTimeout(() => {
             dispatch(loadingAC(false));
             console.log('stop');
         }, 2500);
