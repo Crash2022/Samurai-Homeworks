@@ -23,7 +23,7 @@ function HW10() {
             console.log('stop');
         }, 2500);
         return () => {
-            clearInterval(timer);
+            clearTimeout(timer);
         }
     };
 
