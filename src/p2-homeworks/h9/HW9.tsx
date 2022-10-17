@@ -4,7 +4,7 @@ import AlternativeClock from "./AlternativeClock";
 
 function HW9() {
 
-    const show = false;
+    const show = true;
 
     return (
         <div>
