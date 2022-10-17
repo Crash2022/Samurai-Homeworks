@@ -10,7 +10,6 @@ function AlternativeClock() {
     useEffect(() => {
         const altClock: number = window.setInterval(() => {
             setDate(moment());
-            console.log('interval in moment library');
         }, 1000)
 
         return () => {

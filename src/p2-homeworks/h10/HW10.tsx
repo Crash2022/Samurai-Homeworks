@@ -22,6 +22,9 @@ function HW10() {
             dispatch(loadingAC(false));
             console.log('stop');
         }, 2500);
+        return () => {
+            clearInterval(timer);
+        }
     };
 
     return (
