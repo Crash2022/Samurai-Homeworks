@@ -11,6 +11,8 @@ function HW10() {
     const dispatch = useDispatch();
     const loading = useSelector<AppStoreType, InitialStateType>( state => state.loading);
 
+    console.log('HW10');
+
     const setLoading = () => {
         // dispatch
         console.log('loading...');
@@ -19,7 +21,7 @@ function HW10() {
         const timer: number = window.setTimeout(() => {
             dispatch(loadingAC(false));
             console.log('stop');
-        }, 2000);
+        }, 2500);
     };
 
     return (
@@ -36,7 +38,7 @@ function HW10() {
                         />
                     </div>
                 ) : (
-                    <div style={{height: '155px'}}>
+                    <div style={{height: '154px'}}>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
                     </div>
                 )

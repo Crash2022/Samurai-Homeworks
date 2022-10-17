@@ -1,13 +1,17 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import moment, {MomentInput} from "moment";
 
 function AlternativeClock() {
 
+    console.log('HW09 MomentLibrary');
+
     const [date, setDate] = useState<MomentInput>(moment());
 
-    setInterval(()=> {
-        setDate(moment());
-    }, 1000)
+    useEffect(()=> {
+        setInterval(()=> {
+            setDate(moment());
+        }, 1000)
+    },[])
 
     const currentTime = moment().format('h:mm:ss');
 

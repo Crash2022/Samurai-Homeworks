@@ -6,6 +6,8 @@ function Clock() {
     const [date, setDate] = useState<Date>(new Date());
     const [show, setShow] = useState<boolean>(false);
 
+    console.log('HW09');
+
     const stop = () => {
         // stop
         //console.log('clear');

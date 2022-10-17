@@ -13,8 +13,7 @@ function HW9() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            <span>Здесь закомментировано MomentLibrary, но из-за ДЗ 10 я скрыл его</span>
-            {/*<AlternativeClock/>*/}
+            <AlternativeClock/>
             <hr/>
         </div>
     )
