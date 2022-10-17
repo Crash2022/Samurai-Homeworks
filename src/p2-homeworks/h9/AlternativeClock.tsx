@@ -10,7 +10,12 @@ function AlternativeClock() {
     useEffect(()=> {
         setInterval(()=> {
             setDate(moment());
+            console.log('123')
         }, 1000)
+
+        return () => {
+            //clearInterval
+        }
     },[])
 
     const currentTime = moment().format('hh:mm:ss');
@@ -18,7 +23,6 @@ function AlternativeClock() {
     return (
         <div style={{marginLeft: '10px'}}>
             <h4>Moment Library Test</h4>
-            <div>Для проверки можно открыть консоль</div>
             <div>
                 {moment().format('DD.MM.YYYY')}
             </div>

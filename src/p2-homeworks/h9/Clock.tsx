@@ -10,12 +10,12 @@ function Clock() {
 
     const stop = () => {
         // stop
-        //console.log('clear');
+        console.log('stop');
         clearInterval(timerId);
     }
     const start = () => {
         // start
-        //console.log('start');
+        console.log('start');
         stop();
         const id: number = window.setInterval(() => {
             //setDate &&
