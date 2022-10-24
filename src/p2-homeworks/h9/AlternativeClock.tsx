@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import moment, {MomentInput} from "moment";
+import 'moment/locale/ru'; // для определения локации(языка)
+// require("moment/min/locales.min"); *для испорта всех языков
 
 function AlternativeClock() {
 
@@ -17,13 +19,14 @@ function AlternativeClock() {
         }
     }, [])
 
-    const currentTime = moment().format('hh:mm:ss');
+    //moment.locale('ru'); //*при импорте всех языков
+    const currentTime = moment().format('LTS');
 
     return (
         <div style={{marginLeft: '10px'}}>
             <h4>Moment Library Test</h4>
             <div>
-                {moment().format('DD.MM.YYYY')}
+                {moment().format('LL')}
             </div>
             <div>
                 {currentTime}
