@@ -20,7 +20,7 @@ export const loadingReducer = (state: InitialStateType = initState, action: Load
 }
 
 export type LoadingACType = ReturnType<typeof loadingAC>
-export const loadingAC = (isLoading: boolean): any => ({
+export const loadingAC = (isLoading: boolean) => ({
     type: 'SET_LOADING',
     isLoading
 } as const) // fix any

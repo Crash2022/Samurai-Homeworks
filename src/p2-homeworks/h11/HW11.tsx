@@ -6,6 +6,10 @@ function HW11() {
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
 
+    const onChangeRangeValue = (value: number) => {
+        setValue1(value);
+    }
+
     return (
         <div>
             <hr/>
@@ -13,18 +17,18 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <span style={{display: 'inline-block', width:'30px'}}>{value1}</span>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={onChangeRangeValue}
                 />
             </div>
 
             <div>
-                <span>{value1}</span>
+                <span style={{display: 'inline-block', width:'30px'}}>{value1}</span>
                 <SuperDoubleRange
                     // сделать так чтоб value1 и value2 изменялось
                 />
-                <span>{value2}</span>
+                <span style={{display: 'inline-block', width:'20px', marginLeft: '5px'}}>{value2}</span>
             </div>
 
             <hr/>
