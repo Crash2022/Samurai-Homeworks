@@ -9,12 +9,13 @@ type SuperDoubleRangePropsType = DefaultInputPropsType & {
     //onChangeRange?: (value: [number, number]) => void
 
     //value?: [number, number]
-    // min, max, step, disable, ...
+    //min, max, step, disable, ...
 
-    // min: number
-    // max: number
-    // step: number
-    // disable: boolean
+    //min: number
+    //max: number
+    //step: number
+    //disable: boolean
+    //multiple: boolean
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
@@ -22,8 +23,9 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         onChange, onChangeRange,
         //value,
         // min, max, step, disable, ...
-        //min, max, step, disable,
+        //min, max, step, //disable,
         className,
+        //multiple,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }

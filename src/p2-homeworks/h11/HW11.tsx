@@ -29,6 +29,7 @@ function HW11() {
                 <SuperDoubleRange
                     // сделать так чтоб value1 и value2 изменялось
                     value={value1}
+                    //onChangeRange={({min, max}: {min: number, max: number}) => {}}
                     onChangeRange={onChangeRangeValue}
                 />
                 <span style={{display: 'inline-block', width:'20px', marginLeft: '5px'}}>{value2}</span>
