@@ -1,9 +1,11 @@
 const initState = {
-    value: 'some'
+    value: 'some',
+    themes: ['dark', 'red', 'some', 'new']
 };
 
 export type InitialStateThemeType = {
     value: string
+    themes: Array<string>
 }
 
 type ActionsType = ChangeThemeACType;

@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeThemeAC, InitialStateThemeType} from "./bll/themeReducer";
 import {AppStoreType} from "../h10/bll/store";
 
-const themes = ['dark', 'red', 'some'];
+// const themes = ['dark', 'red', 'some']; // для способа useState
 
 function HW12() {
 
@@ -42,7 +42,7 @@ function HW12() {
 
             <SuperRadio
                 name={'themes'}
-                options={themes}
+                options={themeColor.themes}
                 value={themeColor.value} // положение кнопки
                 onChange={onChangeCallback} // само действие
                 //onChangeOption={onChangeOption} // отклик на смену кнопки
