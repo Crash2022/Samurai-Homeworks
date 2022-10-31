@@ -18,7 +18,8 @@ function HW12() {
     // useDispatch, onChangeCallback
 
     const onChangeCallback = (event: ChangeEvent<HTMLInputElement>) => {
-        console.log(event.currentTarget.value);
+        // console.log(event.currentTarget.value);
+        onChangeOption(event.currentTarget.value);
     }*/
 
     /*-----------------------------------------------------------------*/
