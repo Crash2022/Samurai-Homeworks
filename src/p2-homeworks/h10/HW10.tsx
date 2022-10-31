@@ -11,7 +11,7 @@ function HW10() {
     const dispatch = useDispatch();
     const loading = useSelector<AppStoreType, InitialStateType>( state => state.loading);
 
-    console.log('HW10');
+    //console.log('HW10');
 
     const setLoading = () => {
         // dispatch

@@ -1,19 +1,52 @@
-import React from "react";
+import React, {ChangeEvent, useState} from "react";
 import s from "./HW12.module.css";
+import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
+import {useDispatch, useSelector} from "react-redux";
+import {changeThemeAC, InitialStateThemeType} from "./bll/themeReducer";
+import {AppStoreType} from "../h10/bll/store";
 
 const themes = ['dark', 'red', 'some'];
 
 function HW12() {
-    const theme = 'some'; // useSelector
+
+    // способ через useState
+    /*//const theme = 'some'; // useSelector
+
+    const [value, onChangeOption] = useState(themes[2]);
+    const theme = value;
 
     // useDispatch, onChangeCallback
 
+    const onChangeCallback = (event: ChangeEvent<HTMLInputElement>) => {
+        console.log(event.currentTarget.value);
+    }*/
+
+    /*-----------------------------------------------------------------*/
+
+    // способ через Redux
+    const themeColor = useSelector<AppStoreType, InitialStateThemeType>(state => state.theme);
+
+    const dispatch = useDispatch();
+
+    const onChangeCallback = (event: ChangeEvent<HTMLInputElement>) => {
+        // console.log(event.currentTarget.value);
+        dispatch(changeThemeAC(event.currentTarget.value));
+    }
+
     return (
-        <div className={s[theme]}>
+        <div className={s[themeColor.value]}>
             <hr/>
-            <span className={s[theme + '-text']}>
+            <span className={s[themeColor.value + '-text']}>
                 homeworks 12
             </span>
+
+            <SuperRadio
+                name={'themes'}
+                options={themes}
+                value={themeColor.value} // положение кнопки
+                onChange={onChangeCallback} // само действие
+                //onChangeOption={onChangeOption} // отклик на смену кнопки
+            />
 
             {/*should work (должно работать)*/}
             {/*SuperSelect or SuperRadio*/}
