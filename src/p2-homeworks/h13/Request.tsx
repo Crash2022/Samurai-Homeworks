@@ -11,10 +11,10 @@ function Request() {
     const getRequest = () => {
         RequestAPI.getAuth()
             .then(response => setData(response))
-            .catch (error) {
-            console.log({...error});
-            //console.log(error.response ? error.response.data.errorText : error.message);
-        }
+            .catch(error => {
+                console.log({...error});
+                console.log(error.response ? error.response.data.errorText : error.message);
+            })
     }
 
     return (
@@ -28,7 +28,9 @@ function Request() {
                 </SuperButton>
                 <SuperCheckbox/>
             </div>
-            <div>{data}</div>
+            <div>
+                {data}
+            </div>
         </div>
     );
 }

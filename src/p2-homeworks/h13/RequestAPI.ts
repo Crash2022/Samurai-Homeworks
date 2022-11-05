@@ -6,8 +6,10 @@ import axios from "axios";
 
 export const RequestAPI = {
     getAuth() {
-        axios
-            .get('https://neko-cafe-back.herokuapp.com/auth/test', {})
-            .then(response => response.data)
+        return (
+            axios
+                .get('https://neko-cafe-back.herokuapp.com/auth/test/', {})
+                .then(response => response.data)
+        )
     }
 }
