@@ -5,13 +5,13 @@ import axios from "axios";
 // body: {success: true}
 
 export const RequestAPI = {
-    getAuth() {
-        return (
-            axios
-                .get('https://neko-cafe-back.herokuapp.com/auth/test/', {})
-                .then(response => response.data)
-        )
-    },
+    // getAuth() {
+    //     return (
+    //         axios
+    //             .get('https://neko-cafe-back.herokuapp.com/auth/test/', {})
+    //             .then(response => response.data)
+    //     )
+    // },
     postCheckbox(success: boolean) {
         return (
             axios

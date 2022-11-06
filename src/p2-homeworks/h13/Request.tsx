@@ -8,23 +8,25 @@ function Request() {
 
     //const [data, setData] = useState<any>(null);
     const [checked, setChecked] = useState<boolean>(false)
-    console.log(checked);
+    //console.log(checked);
 
-    const getRequest = () => {
-        RequestAPI.getAuth()
-            .then(response => console.log(response.body))
+    // const getRequest = () => {
+    //     RequestAPI.getAuth()
+    //         .then(response => console.log(response))
+    //         .catch(error => console.log(error))
+    // }
+
+    const sendRequest = () => {
+        RequestAPI.postCheckbox(checked)
+            .then(response => console.log(response))
             .catch(error => {
                 console.log({...error});
                 console.log(error.response ? error.response.data.errorText : error.message);
             })
     }
 
-    const postRequest = (e: ChangeEvent<HTMLInputElement>) => {
+    const changeStatus = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(e.currentTarget.checked);
-
-        RequestAPI.postCheckbox(checked)
-            .then(response => console.log(response.body))
-            .catch(error => console.log(error))
     }
 
     return (
@@ -33,12 +35,15 @@ function Request() {
                 <span>Request Component</span>
             </div>
             <div>
-                <SuperButton onClick={getRequest}>
-                    Request
+                {/*<SuperButton onClick={getRequest}>*/}
+                {/*    Get Request*/}
+                {/*</SuperButton>*/}
+                <SuperButton onClick={sendRequest}>
+                    Send Request
                 </SuperButton>
                 <SuperCheckbox
                     checked={checked}
-                    onChange={postRequest}
+                    onChange={changeStatus}
                 />
             </div>
         </div>
