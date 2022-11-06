@@ -10,11 +10,9 @@ function Request() {
     const [checked, setChecked] = useState<boolean>(false)
     //console.log(checked);
 
-    // const getRequest = () => {
-    //     RequestAPI.getAuth()
-    //         .then(response => console.log(response))
-    //         .catch(error => console.log(error))
-    // }
+    const changeStatus = (e: ChangeEvent<HTMLInputElement>) => {
+        setChecked(e.currentTarget.checked);
+    }
 
     const sendRequest = () => {
         RequestAPI.postCheckbox(checked)
@@ -25,19 +23,12 @@ function Request() {
             })
     }
 
-    const changeStatus = (e: ChangeEvent<HTMLInputElement>) => {
-        setChecked(e.currentTarget.checked);
-    }
-
     return (
         <div className={s.request}>
             <div>
                 <span>Request Component</span>
             </div>
             <div>
-                {/*<SuperButton onClick={getRequest}>*/}
-                {/*    Get Request*/}
-                {/*</SuperButton>*/}
                 <SuperButton onClick={sendRequest}>
                     Send Request
                 </SuperButton>
