@@ -8,10 +8,11 @@ function Request() {
 
     //const [data, setData] = useState<any>(null);
     const [checked, setChecked] = useState<boolean>(false)
+    console.log(checked);
 
     const getRequest = () => {
         RequestAPI.getAuth()
-            .then(response => console.log(response.data))
+            .then(response => console.log(response.body))
             .catch(error => {
                 console.log({...error});
                 console.log(error.response ? error.response.data.errorText : error.message);
