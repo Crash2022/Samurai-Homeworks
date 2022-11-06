@@ -11,5 +11,12 @@ export const RequestAPI = {
                 .get('https://neko-cafe-back.herokuapp.com/auth/test/', {})
                 .then(response => response.data)
         )
+    },
+    postCheckbox(success: boolean) {
+        return (
+            axios
+                .post('https://neko-cafe-back.herokuapp.com/auth/test/', {success}, {})
+                .then(response => response.data)
+        )
     }
 }
