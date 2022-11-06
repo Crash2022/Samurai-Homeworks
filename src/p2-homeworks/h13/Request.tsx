@@ -6,12 +6,12 @@ import {RequestAPI} from "./RequestAPI";
 
 function Request() {
 
-    const [data, setData] = useState<any>(null);
+    //const [data, setData] = useState<any>(null);
     const [checked, setChecked] = useState<boolean>(false)
 
     const getRequest = () => {
         RequestAPI.getAuth()
-            .then(response => setData(response))
+            .then(response => console.log(response.data))
             .catch(error => {
                 console.log({...error});
                 console.log(error.response ? error.response.data.errorText : error.message);
@@ -20,6 +20,7 @@ function Request() {
 
     const postRequest = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(e.currentTarget.checked);
+
         RequestAPI.postCheckbox(checked)
             .then(response => console.log(response.body))
             .catch(error => console.log(error))
@@ -38,9 +39,6 @@ function Request() {
                     checked={checked}
                     onChange={postRequest}
                 />
-            </div>
-            <div>
-                {data}
             </div>
         </div>
     );
