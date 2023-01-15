@@ -6,9 +6,7 @@ import {RequestAPI} from "./RequestAPI";
 
 function Request() {
 
-    //const [data, setData] = useState<any>(null);
     const [checked, setChecked] = useState<boolean>(false)
-    //console.log(checked);
 
     const changeStatus = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(e.currentTarget.checked);
