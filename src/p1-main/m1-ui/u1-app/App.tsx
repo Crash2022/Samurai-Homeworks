@@ -17,27 +17,30 @@ import HW12 from "../../../p2-homeworks/h12/HW12"
 import HW13 from "../../../p2-homeworks/h13/HW13"
 
 import HW14 from "../../../p2-homeworks/hw14/HW14"
+import HW15 from "../../../p2-homeworks/hw15/HW15"
 
 function App() {
     return (
         <div className={s.App}>
             <div>react homeworks:</div>
-            {/*<HW1/>
-            <HW2/>
-            <HW3/>
-            <HW4/>*/}
+            {/*<HW1/>*/}
+            {/*<HW2/>*/}
+            {/*<HW3/>*/}
+            {/*<HW4/>*/}
 
             <HW5/>
-            <HW6/>
-            <HW7/>
-            <HW8/>
-            <HW9/>
-            <HW10/>
-            <HW11/>
-            <HW12/>
-            <HW13/>
 
-            <HW14/>
+            {/*<HW6/>*/}
+            {/*<HW7/>*/}
+            {/*<HW8/>*/}
+            {/*<HW9/>*/}
+            {/*<HW10/>*/}
+            {/*<HW11/>*/}
+            {/*<HW12/>*/}
+            {/*<HW13/>*/}
+
+            {/*<HW14/>*/}
+            {/*<HW15/>*/}
         </div>
     )
 }
