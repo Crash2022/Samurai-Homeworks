@@ -1,6 +1,6 @@
 import React from 'react'
-import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
-import {Pagination} from '@mui/material'
+import SuperSelect from "../../../h7/common/c5-SuperSelect/SuperSelect"
+// import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
 
 export type SuperPaginationPropsType = {
@@ -28,32 +28,32 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     return (
         <div className={s.pagination}>
-            <Pagination
-                id={id + '-pagination'}
-                sx={{
-                    // стили для Pagination // пишет студент
-                }}
-                page={page}
-                count={lastPage}
-                onChange={onChangeCallback}
-                hideNextButton
-                hidePrevButton
-            />
+            {/*<Pagination*/}
+            {/*    id={id + '-pagination'}*/}
+            {/*    sx={{*/}
+            {/*        // стили для Pagination // пишет студент*/}
+            {/*    }}*/}
+            {/*    page={page}*/}
+            {/*    count={lastPage}*/}
+            {/*    onChange={onChangeCallback}*/}
+            {/*    hideNextButton*/}
+            {/*    hidePrevButton*/}
+            {/*/>*/}
 
             <span className={s.text1}>
                 показать
             </span>
 
-            <SuperSelect
-                id={id + '-pagination-select'}
-                value={itemsCountForPage}
-                options={[
-                    {id: 4, value: 4},
-                    {id: 7, value: 7},
-                    {id: 10, value: 10},
-                ]}
-                onChange={onChangeSelect}
-            />
+            {/*<SuperSelect*/}
+            {/*    id={id + '-pagination-select'}*/}
+            {/*    value={itemsCountForPage}*/}
+            {/*    options={[*/}
+            {/*        {id: 4, value: 4},*/}
+            {/*        {id: 7, value: 7},*/}
+            {/*        {id: 10, value: 10},*/}
+            {/*    ]}*/}
+            {/*    onChange={onChangeSelect}*/}
+            {/*/>*/}
 
             <span className={s.text2}>
                 строк в таблице
