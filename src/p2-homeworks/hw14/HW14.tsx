@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import s2 from '../../s1-main/App.module.css'
+import s2 from '../../p1-main/m1-ui/u1-app/App.module.css'
 import s from './HW14.module.css'
 import axios from 'axios'
 // import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedInput'
