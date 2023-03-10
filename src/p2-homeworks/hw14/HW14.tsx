@@ -2,9 +2,8 @@ import React, {useEffect, useState} from 'react'
 import s2 from '../../p1-main/m1-ui/u1-app/App.module.css'
 import s from './HW14.module.css'
 import axios from 'axios'
-// import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedInput'
-import {useSearchParams} from 'react-router-dom'
 import SuperDebouncedInput from "./common/c8-SuperDebouncedInput/SuperDebouncedInput";
+import {useSearchParams} from 'react-router-dom'
 
 /*
 * 1 - дописать функцию onChangeTextCallback в SuperDebouncedInput
@@ -38,8 +37,10 @@ const HW14 = () => {
                 // делает студент
 
                 // сохранить пришедшие данные
-
-                //
+                if (res) {
+                    setTechs(res.data.techs)
+                }
+                setLoading(false)
             })
     }
 
@@ -48,9 +49,8 @@ const HW14 = () => {
         // делает студент
 
         // добавить/заменить значение в квери урла
-        // setSearchParams(
-
-        //
+        // setSearchParams()
+        setSearchParams(value)
     }
 
     useEffect(() => {
@@ -66,8 +66,8 @@ const HW14 = () => {
     ))
 
     return (
-        <div id={'hw14'}>
-            <div className={s2.hwTitle}>Homework #14</div>
+        <div id={'hw14'} style={{marginBottom: '30px'}}>
+            <div className={s2.hwTitle} style={{fontWeight: 'bold'}}>Homework #14</div>
 
             <div className={s2.hw}>
                 <SuperDebouncedInput
