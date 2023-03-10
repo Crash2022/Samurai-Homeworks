@@ -9,19 +9,35 @@
 .techHeader {
     width: 50vw;
 }
+.techHeader:hover {
+    cursor: pointer;
+}
 
 .developerHeader {
 
 }
+.developerHeader:hover {
+    cursor: pointer;
+}
 
 .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
 }
 
 .rowHeader {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkmagenta;
+    color: white;
+    width: 550px;
+    height: 30px;
+    margin-bottom: 5px;
 }
 
 .loading {
-
+    height: 20px;
 }
